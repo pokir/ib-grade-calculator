@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ib-grade-calculator/static/css/main.22ea66e6.css",
+    "main.js": "/ib-grade-calculator/static/js/main.7486b48c.js",
+    "index.html": "/ib-grade-calculator/index.html",
+    "main.22ea66e6.css.map": "/ib-grade-calculator/static/css/main.22ea66e6.css.map",
+    "main.7486b48c.js.map": "/ib-grade-calculator/static/js/main.7486b48c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.22ea66e6.css",
+    "static/js/main.7486b48c.js"
+  ]
+}
