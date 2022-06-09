@@ -116,27 +116,31 @@ const Course = props => {
     <div
       style={{
         backgroundColor: '#1183aa',
-
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'flex-start safe',
-        flexWrap: 'wrap',
       }}
     >
-      {Object.values(assignments)}
-
-      <AddAssignment createAssignment={createAssignment} />
-
       <CourseSummary
         weightedPercentage={
           Object.values(weightedPercentages).length === 0 ? 0 :
           Object.values(weightedPercentages).reduce((a, b) => a + b)
         }
         sumOfWeights={
-          Object.values(weights).length === 0 ? 0 :
+          Object.values(weights).length === 0 ? null :
           Object.values(weights).reduce((a, b) => a + b)
         }
       />
+
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'flex-start safe',
+          flexWrap: 'wrap',
+        }}
+      >
+        {Object.values(assignments)}
+
+        <AddAssignment createAssignment={createAssignment} />
+      </div>
     </div>
   );
 };
