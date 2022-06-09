@@ -16,8 +16,9 @@ const AddAssignment = props => {
         alignItems: 'center',
       }}
     >
-      <h1>Add assignment</h1>
-      <button onClick={props.createAssignment}>+</button>
+      <button style={{margin: 'auto'}} onClick={props.createAssignment}>
+        Add assignment
+      </button>
     </div>
   );
 };
