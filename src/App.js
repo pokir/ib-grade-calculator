@@ -1,4 +1,3 @@
-import './App.css';
 import Course from './components/course.jsx';
 import Footer from './components/footer.jsx';
 
