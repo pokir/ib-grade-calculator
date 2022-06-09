@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Assignment from './assignment.jsx';
 import AddAssignment from './addAssignment.jsx';
 import CourseSummary from './courseSummary.jsx';
-import InvalidSumOfWeightsWarning from './invalidSumOfWeightsWarning.jsx';
 
 const Course = props => {
   const [ assignments, setAssignments ] = useState({});
@@ -128,17 +127,14 @@ const Course = props => {
 
       <AddAssignment createAssignment={createAssignment} />
 
-      <InvalidSumOfWeightsWarning
-        sumOfWeights={
-          Object.values(weights).length === 0 ? 0 :
-          Object.values(weights).reduce((a, b) => a + b)
-        }
-      />
-
       <CourseSummary
         weightedPercentage={
           Object.values(weightedPercentages).length === 0 ? 0 :
           Object.values(weightedPercentages).reduce((a, b) => a + b)
+        }
+        sumOfWeights={
+          Object.values(weights).length === 0 ? 0 :
+          Object.values(weights).reduce((a, b) => a + b)
         }
       />
     </div>
