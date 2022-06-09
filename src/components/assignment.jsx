@@ -3,6 +3,9 @@ import NumberInput from './numberInput.jsx';
 import DeleteButton from './deleteButton.jsx';
 
 const Assignment = props => {
+  // TODO: make assignments grow vertically when shrinked horizontally in the
+  // flexbox
+
   const [ weight, setWeight ] = useState(1);
   const [ numberOfMarks, setNumberOfMarks ] = useState(1);
   const [ marksAwarded, setMarksAwarded ] = useState(0);
