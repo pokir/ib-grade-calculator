@@ -4,7 +4,7 @@ const Footer = props => {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: 'relative',
         bottom: '0',
         width: '100%',
         padding: '10px',
