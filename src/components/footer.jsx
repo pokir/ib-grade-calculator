@@ -9,13 +9,14 @@ const Footer = props => {
         width: '100%',
         padding: '10px',
         textAlign: 'left',
-        backgroundColor: '#1183bb',
+        backgroundColor: 'lightgray',
         color: '#444',
-        borderTop: '1px solid black',
+        //borderTop: '1px solid black',
         fontSize: '0.8em',
       }}
     >
       <p>{props.appName} v{props.appVersion}</p>
+      <p>Find the source code at <a target='_blank' rel='noopener noreferrer' href={props.appSourceCodeUrl}>{props.appSourceCodeUrl}</a>.</p>
     </div>
   );
 };

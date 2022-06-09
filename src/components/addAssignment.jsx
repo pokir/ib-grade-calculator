@@ -17,7 +17,7 @@ const AddAssignment = props => {
       }}
     >
       <button style={{margin: 'auto'}} onClick={props.createAssignment}>
-        Add assignment
+        Add an assignment
       </button>
     </div>
   );

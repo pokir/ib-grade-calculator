@@ -7,7 +7,7 @@ const AddCourse = props => {
         backgroundColor: '#1183aa',
         width: '100%',
         height: '150px',
-        //margin: '10px',
+        marginBottom: '10px',
         textAlign: 'center',
         
         display: 'flex',
@@ -17,7 +17,7 @@ const AddCourse = props => {
       }}
     >
       <button style={{margin: 'auto'}} onClick={props.createCourse}>
-        Add course
+        Add a course
       </button>
     </div>
   );

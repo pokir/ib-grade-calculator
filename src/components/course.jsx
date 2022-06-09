@@ -117,7 +117,7 @@ const Course = props => {
     <div
       style={{
         backgroundColor: '#1183aa',
-        borderBottom: '5px solid black',
+        marginBottom: '10px',
       }}
     >
       <DeleteButton
