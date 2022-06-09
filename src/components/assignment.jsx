@@ -7,11 +7,15 @@ const Assignment = props => {
   const [ numberOfMarks, setNumberOfMarks ] = useState(1);
   const [ marksAwarded, setMarksAwarded ] = useState(0);
 
-  const { onWeightedPercentChange } = props;
+  const { onWeightedPercentChange, onWeightChange } = props;
 
   useEffect(() => {
     onWeightedPercentChange((marksAwarded / numberOfMarks) * weight);
   }, [onWeightedPercentChange, weight, numberOfMarks, marksAwarded]);
+
+  useEffect(() => {
+    onWeightChange(weight);
+  }, [onWeightChange, weight]);
 
   return (
     <div
@@ -27,17 +31,20 @@ const Assignment = props => {
         alignItems: 'center',
       }}
     >
-      <h4 contentEditable="true">Paper 1</h4>
+      <h4 contentEditable="true">Paper {props.index + 1}</h4>
 
-      <NumberInput min='1' max='100' label='Weight (out of 100)'
+      <NumberInput min='1' max='100'
+        label='Weight (out of 100)'
         onValueChange={setWeight}
       />
       
-      <NumberInput min='1' max='999' label='Number of marks'
+      <NumberInput min='1' max='999'
+        label='Number of marks'
         onValueChange={setNumberOfMarks}
       />
       
-      <NumberInput min='0' max={numberOfMarks} label={`Marks awarded (out of ${numberOfMarks})`}
+      <NumberInput min='0' max={numberOfMarks}
+        label={`Marks awarded (out of ${numberOfMarks})`}
         onValueChange={setMarksAwarded}
       />
 
