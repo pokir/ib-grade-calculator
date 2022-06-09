@@ -1,6 +1,6 @@
-import CoursesList from './components/coursesList.jsx';
-import Header from './components/header.jsx';
-import Footer from './components/footer.jsx';
+import CoursesList from './components/coursesList';
+import Header from './components/header';
+import Footer from './components/footer';
 
 const App = () => {
   document.title = 'IB Grade Calculator';

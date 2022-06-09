@@ -1,8 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Assignment from './assignment.jsx';
-import AddAssignment from './addAssignment.jsx';
-import CourseSummary from './courseSummary.jsx';
-import DeleteButton from './deleteButton.jsx';
+import Assignment from './assignment';
+import AddAssignment from './addAssignment';
+import CourseSummary from './courseSummary';
+import DeleteButton from './deleteButton';
 
 const Course = props => {
   const [ assignments, setAssignments ] = useState({});

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import NumberInput from './numberInput.jsx';
-import DeleteButton from './deleteButton.jsx';
+import NumberInput from './numberInput';
+import DeleteButton from './deleteButton';
 
 const Assignment = props => {
   // TODO: make assignments grow vertically when shrinked horizontally in the

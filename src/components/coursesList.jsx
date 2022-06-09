@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import AddCourse from './addCourse.jsx';
-import Course from './course.jsx';
+import AddCourse from './addCourse';
+import Course from './course';
 
 const CoursesList = props => {
   // The container for all the courses.
