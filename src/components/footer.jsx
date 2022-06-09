@@ -12,6 +12,7 @@ const Footer = props => {
         backgroundColor: '#1183bb',
         color: '#444',
         borderTop: '1px solid black',
+        fontSize: '0.8em',
       }}
     >
       <p>{props.appName} v{props.appVersion}</p>
