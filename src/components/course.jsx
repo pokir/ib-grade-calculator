@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Assignment from './assignment.jsx';
 import AddAssignment from './addAssignment.jsx';
 import CourseSummary from './courseSummary.jsx';
+import DeleteButton from './deleteButton.jsx';
 
 const Course = props => {
   const [ assignments, setAssignments ] = useState({});
@@ -116,8 +117,26 @@ const Course = props => {
     <div
       style={{
         backgroundColor: '#1183aa',
+        borderBottom: '5px solid black',
       }}
     >
+      <DeleteButton
+        onDelete={
+          () => {
+            props.onDelete(props.index);
+          }
+        }
+      />
+
+      <h2 contentEditable='true' style={{textAlign: 'center'}}>
+        {
+          [
+            'Chemistry SL', 'Physics HL',
+            'Math AA SL', 'Spanish B HL'
+          ][props.index % 4]
+        }
+      </h2>
+      
       <CourseSummary
         weightedPercentage={
           Object.values(weightedPercentages).length === 0 ? 0 :
