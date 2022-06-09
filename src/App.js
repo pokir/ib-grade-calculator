@@ -1,10 +1,10 @@
 import './App.css';
-import Assignment from './components/assignment.jsx';
+import Course from './components/course.jsx';
 
 const App = () => {
   return (
     <div className="App">
-      <Assignment />
+      <Course />
     </div>
   );
 }

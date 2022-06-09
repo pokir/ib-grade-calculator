@@ -1,48 +1,53 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import NumberInput from './numberInput.jsx';
+import DeleteButton from './deleteButton.jsx';
 
-const Assignment = () => {
+const Assignment = props => {
   const [ weight, setWeight ] = useState(1);
   const [ numberOfMarks, setNumberOfMarks ] = useState(1);
   const [ marksAwarded, setMarksAwarded ] = useState(0);
+
+  const { onWeightedPercentChange } = props;
+
+  useEffect(() => {
+    onWeightedPercentChange((marksAwarded / numberOfMarks) * weight);
+  }, [onWeightedPercentChange, weight, numberOfMarks, marksAwarded]);
 
   return (
     <div
       style={{
         backgroundColor: 'beige',
+        width: '250px',
+        height: '250px',
+        margin: '10px',
+        
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly safe',
+        alignItems: 'center',
       }}
     >
-      <h1 contentEditable="true">Paper 1</h1>
+      <h4 contentEditable="true">Paper 1</h4>
 
-    // TODO: Make a number input component with min, max, default, and label
+      <NumberInput min='1' max='100' label='Weight (out of 100)'
+        onValueChange={setWeight}
+      />
+      
+      <NumberInput min='1' max='999' label='Number of marks'
+        onValueChange={setNumberOfMarks}
+      />
+      
+      <NumberInput min='0' max={numberOfMarks} label={`Marks awarded (out of ${numberOfMarks})`}
+        onValueChange={setMarksAwarded}
+      />
 
-      <p>Weight (out of 100)</p>
-      <input type='number' min='1' max='100'
-        onChange={
-          el => {
-            setWeight(Number.parseInt(el.target.value));
+      <DeleteButton
+        onDelete={
+          () => {
+            props.onDelete(props.index);
           }
         }
-      ></input>
-
-      <p>Number of marks</p>
-      <input type='number' min='1' max='999'
-        onChange={
-          el => {
-            setNumberOfMarks(Number.parseInt(el.target.value));
-          }
-        }
-      ></input>
-
-      <p>Marks awarded (out of {numberOfMarks})</p>
-      <input type='number' min='0' max={numberOfMarks}
-        onChange={
-          el => {
-            setMarksAwarded(Number.parseInt(el.target.value));
-          }
-        }
-      ></input>
-
-      <p></p>
+      />
 
     </div>
   );
