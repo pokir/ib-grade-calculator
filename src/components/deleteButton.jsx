@@ -11,6 +11,7 @@ const DeleteButton = props => {
         fontSize: '9px',
         textAlign: 'center',
         margin: '10px',
+        borderRadius: '20%',
       }}
       onClick={
         () => {

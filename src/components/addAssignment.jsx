@@ -9,6 +9,7 @@ const AddAssignment = props => {
         height: '250px',
         margin: '10px',
         textAlign: 'center',
+        borderRadius: '10%',
         
         display: 'flex',
         flexDirection: 'column',

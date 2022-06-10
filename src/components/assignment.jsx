@@ -27,6 +27,7 @@ const Assignment = props => {
         width: '250px',
         height: '250px',
         margin: '10px',
+        borderRadius: '10%',
         
         display: 'flex',
         flexDirection: 'column',
