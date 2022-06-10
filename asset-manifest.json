@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ib-grade-calculator/static/css/main.08885c06.css",
-    "main.js": "/ib-grade-calculator/static/js/main.be0e0afd.js",
+    "main.js": "/ib-grade-calculator/static/js/main.9c130dfd.js",
     "index.html": "/ib-grade-calculator/index.html",
     "main.08885c06.css.map": "/ib-grade-calculator/static/css/main.08885c06.css.map",
-    "main.be0e0afd.js.map": "/ib-grade-calculator/static/js/main.be0e0afd.js.map"
+    "main.9c130dfd.js.map": "/ib-grade-calculator/static/js/main.9c130dfd.js.map"
   },
   "entrypoints": [
     "static/css/main.08885c06.css",
-    "static/js/main.be0e0afd.js"
+    "static/js/main.9c130dfd.js"
   ]
 }
