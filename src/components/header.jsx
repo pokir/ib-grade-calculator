@@ -12,7 +12,7 @@ const Header = () => {
       <h1 style={{textAlign: 'center', width: '100%'}}>IB Grade Calculator</h1>
       <p style={{textAlign: 'center', width: '100%'}}>Easily calculate the final grade for your IB courses, which you can then use with the IB's grade boundaries.</p>
       <p style={{textAlign: 'center', width: '100%'}}>This tool is meant to be used after doing past papers.</p>
-      <p style={{textAlign: 'center', width: '100%'}}>Just add and rename a course and assignments, and fill out the numbers!</p>
+      <p style={{textAlign: 'center', width: '100%'}}>Just add and rename courses and assignments, and fill out the numbers!</p>
     </div>
   );
 };
